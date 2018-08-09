@@ -7,12 +7,12 @@ branches:
 cache:
   directories:
   - vendor/bundle
-env:
-  PACKER_VERSION: '1.2.5'
-  SC_VERSION: 'stable' # or "v0.4.7", or "latest"
 jobs:
   include:
     - stage: stage1
+      env:
+        PACKER_VERSION: '1.2.5'
+        SC_VERSION: 'stable' # or "v0.4.7", or "latest"
       script: echo 'Stage 1'
     - stage: stage2
       script: echo 'Stage 2'
