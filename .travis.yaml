@@ -1,0 +1,20 @@
+dist: trusty
+group: travis_latest
+language: ruby
+branches:
+  except:
+  - "/^v\\d/"
+cache:
+  directories:
+  - vendor/bundle
+env:
+  PACKER_VERSION: '1.2.5'
+  SC_VERSION: 'stable' # or "v0.4.7", or "latest"
+jobs:
+  include:
+    - stage: stage1
+      script: echo 'Stage 1'
+    - stage: stage2
+      script: echo 'Stage 2'
+    - stage: stage3
+      script: echo 'Stage 3'
