@@ -13,8 +13,6 @@ jobs:
       env:
         PACKER_VERSION: '1.2.5'
         SC_VERSION: 'stable' # or "v0.4.7", or "latest"
-      script: echo 'Stage 1'
+      script: echo 'Stage 1'; env
     - stage: stage2
       script: echo 'Stage 2'
-    - stage: stage3
-      script: echo 'Stage 3'
