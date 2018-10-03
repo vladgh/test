@@ -17,7 +17,7 @@ jobs:
     - stage: stage2
       script: - |
                 if [[ "$TRAVIS_PULL_REQUEST" == "false" ]] && [[ "$TRAVIS_BRANCH" == "master" ]]; then
-                  echo 'is master'
-                elif [[ "$TRAVIS_TAG"  =~ ^v\d ]]; then
-                  echo 'is tag'
+                  . shlib/docker.sh && run_push && run_post_push
+                elif [[ "$TRAVIS_TAG"  =~ ^v\\d ]]; then
+                  . shlib/docker.sh && run_push && run_post_push
                 fi
