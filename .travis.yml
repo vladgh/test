@@ -15,4 +15,9 @@ jobs:
         SC_VERSION: 'stable' # or "v0.4.7", or "latest"
       script: echo 'Stage 1'; env
     - stage: stage2
-      script: echo 'Stage 2'
+      script: - |
+                if [[ "$TRAVIS_PULL_REQUEST" == "false" ]] && [[ "$TRAVIS_BRANCH" == "master" ]]; then
+                  echo 'is master'
+                elif [[ "$TRAVIS_TAG"  =~ ^v\d ]]; then
+                  echo 'is tag'
+                fi
