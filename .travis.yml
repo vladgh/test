@@ -1,12 +1,12 @@
 dist: trusty
 group: travis_latest
-language: ruby
-branches:
-  except:
-  - "/^v\\d/"
-cache:
-  directories:
-  - vendor/bundle
+#language: ruby
+#branches:
+#  except:
+#  - "/^v\\d/"
+#cache:
+#  directories:
+#  - vendor/bundle
 jobs:
   include:
     - stage: stage1
