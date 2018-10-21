@@ -9,8 +9,4 @@ group: travis_latest
 #  - vendor/bundle
 script:
 - |
-  if [[ "$TRAVIS_PULL_REQUEST" == "false" ]] && [[ "$TRAVIS_BRANCH" == "master" ]]; then
-    echo master
-  elif [[ "$TRAVIS_TAG" =~ ^v\\d ]]; then
-    echo tag
-  fi
+  gpg --version
