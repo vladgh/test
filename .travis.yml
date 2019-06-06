@@ -1,9 +1,8 @@
-env:
-  VAULT_ADDR: 'https://vault.ghn.me:8200'
 jobs:
   include:
     - stage: Vault
       env:
+        VAULT_ADDR: 'https://vault.ghn.me:8200'
         VAULT_VERSION: '1.1.2'
       install:
         - wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip
@@ -16,6 +15,8 @@ jobs:
         - export VAULT_TOKEN="$(vault write -field=token auth/approle/login role_id=${VAULT_ROLE_ID} secret_id=${VAULT_SECRET_ID})"
         - echo "Testing is $(vault kv get -field=test vgh/travis/amis)"
     - stage: Curl
+      env:
+        VAULT_ADDR: 'https://vault.ghn.me:8200'
       script:
         - echo 'Using CURL'
         - export VAULT_SECRET_ID=$(curl --header "X-Vault-Token:${VAULT_TOKEN}" --request POST "${VAULT_ADDR}/v1/auth/approle/role/travis_amis/secret-id" | jq -r .data.secret_id)
