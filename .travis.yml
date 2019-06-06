@@ -5,7 +5,7 @@ install:
   - wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip
   - unzip vault_${VAULT_VERSION}_linux_amd64.zip
   - mv vault ~/bin/
-script:
+before_script:
   - export VAULT_SECRET_ID="$(vault write -field=secret_id -f auth/approle/role/travis_amis/secret-id)"
   - export VAULT_TOKEN="$(vault write -field=token auth/approle/login role_id=${VAULT_ROLE_ID} secret_id=${VAULT_SECRET_ID})"
   - echo "Test secret: $(vault kv get -field=test vgh/travis/amis)"
