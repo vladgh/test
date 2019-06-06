@@ -1,7 +1,7 @@
 dist: xenial
 env:
-  - VAULT_ADDR='https://vault.ghn.me:8200'
-  - VAULT_VERSION=1.1.2
+  - VAULT_ADDR: 'https://vault.ghn.me:8200'
+  - VAULT_VERSION: '1.1.2'
 script:
   - wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip
   - unzip vault_${VAULT_VERSION}_linux_amd64.zip
