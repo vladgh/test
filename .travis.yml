@@ -13,5 +13,5 @@ script:
   - 'echo "Testing is: $(vault kv get -field=test vgh/travis/amis)"'
   - echo 'Using CURL'
   - export VAULT_SECRET_ID=$(curl --header "X-Vault-Token:${VAULT_TOKEN}" --request POST "${VAULT_ADDR}/v1/auth/approle/role/travis_amis/secret-id" | jq -r .data.secret_id)
-  - export VAULT_TOKEN=$(curl --request POST --data '{\"role_id\":\"${VAULT_ROLE_ID}\",\"secret_id\":\"${VAULT_SECRET_ID}\"}' "${VAULT_ADDR}/v1/auth/approle/login" | jq -r .auth.client_token)
+  - export VAULT_TOKEN=$(curl --request POST --data "{\"role_id\":\"${VAULT_ROLE_ID}\",\"secret_id\":\"${VAULT_SECRET_ID}\"}" "${VAULT_ADDR}/v1/auth/approle/login" | jq -r .auth.client_token)
   - echo "Testing is $(curl --header X-Vault-Token:${VAULT_TOKEN} ${VAULT_ADDR}/v1/vgh/data/travis/amis | jq -r .data.data.test)"
