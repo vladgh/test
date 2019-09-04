@@ -1,3 +1,3 @@
 # test
 
-https://github.com/vladgh/test/workflows/CI/badge.svg
+[![Build Status](https://github.com/vintagesucks/random-starred-repository/workflows/Build/badge.svg)]
