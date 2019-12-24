@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: whoami
-    - run: touch /usr/local/bin/test
+    - run: ls -lah ~
     - name: Set up Python
       uses: actions/setup-python@v1
     - name: Install dependencies
