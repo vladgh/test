@@ -3,22 +3,25 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: whoami
-    - run: sudo touch /usr/local/bin/test
-    - name: Set up Python
-      uses: actions/setup-python@v1
-    - name: Install dependencies
-      run: |
-        python3 -m pip install --upgrade pip ansible hvac pycrypto aws-amicleaner future
-    - run: ansible --version
-    - run: amicleaner --version
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - run: echo ::set-env name=TESTING::ok
+    # - name: Set up Python
+    #   uses: actions/setup-python@v1
+    # - name: Install dependencies
+    #   run: |
+    #     python3 -m pip install --upgrade pip ansible hvac pycrypto aws-amicleaner future
+    # - run: ansible --version
+    # - run: amicleaner --version
+    # - name: Run a one-line script
+    #   run: echo Hello, world!
+    # - name: Run a multi-line script
+    #   run: |
+    #     echo Add other actions to build,
+    #     echo test, and deploy your project.
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo $TESTING
