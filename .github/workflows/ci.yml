@@ -24,4 +24,4 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - run: echo $TESTING
+    - run: if [[ "$TESTING" == 'ok' ]]; then exit 0; else exit 2; fi
