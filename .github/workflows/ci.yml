@@ -23,5 +23,6 @@ jobs:
     #     echo test, and deploy your project.
   deploy:
     runs-on: ubuntu-latest
+    needs: install
     steps:
     - run: if [[ "$TESTING" == 'ok' ]]; then exit 0; else exit 2; fi
