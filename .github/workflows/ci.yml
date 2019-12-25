@@ -15,9 +15,11 @@ jobs:
     steps:
     # - uses: actions/checkout@v1
     - name: test
-      run: echo "Running ${{ matrix.ami.name }} with ${AWS_PROFILE}"
+      run: echo "Running ${AWS_NAME} with ${AWS_PROFILE}"
       env:
+        AWS_NAME: ${{ matrix.ami.name }}
         AWS_PROFILE: ${{ matrix.ami.profile }}
+      if: matrix.ami.name != 'testami1'
     # - name: Set up Python
     #   uses: actions/setup-python@v1
     # - name: Install dependencies
