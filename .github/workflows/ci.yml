@@ -23,15 +23,15 @@ jobs:
     - run: git clone https://github.com/vghn/ansible ../ansible
     - name: Install Packer
       run: |
-            curl -L -o packer.zip "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
+            wget -q "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
             wget -qO - "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
-            sudo unzip -d /usr/local/bin/ packer.zip
+            sudo unzip -d /usr/local/bin/ "packer_${PACKER_VERSION}_linux_amd64.zip"
             packer version
     - name: Install Vault
       run: |
             wget -q "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip"
             wget -qO - "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
-            unzip "vault_${VAULT_VERSION}_linux_amd64.zip"; sudo mv vault /usr/local/bin/
+            sudo unzip -d /usr/local/bin/ "vault_${VAULT_VERSION}_linux_amd64.zip"
             vault version
     # - name: Set up Python
     #   uses: actions/setup-python@v1
