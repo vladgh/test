@@ -14,7 +14,8 @@ jobs:
             profile: testprofile2
     steps:
     # - uses: actions/checkout@v1
-    - run: echo "Running ${{ matrix.ami.name }} with ${AWS_PROFILE}"
+    - name: test
+      run: echo "Running ${{ matrix.ami.name }} with ${AWS_PROFILE}"
       with:
         AWS_PROFILE: ${{ matrix.ami.profile }}
     # - name: Set up Python
