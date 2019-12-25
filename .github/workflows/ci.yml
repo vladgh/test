@@ -20,6 +20,11 @@ jobs:
         AWS_NAME: ${{ matrix.ami.name }}
         AWS_PROFILE: ${{ matrix.ami.profile }}
       if: matrix.ami.name != 'testami1'
+    - name: Checkout tools repo
+      uses: actions/checkout@v2
+      with:
+        repository: vghn/ansible
+        path: ../ansible
     # - name: Set up Python
     #   uses: actions/setup-python@v1
     # - name: Install dependencies
