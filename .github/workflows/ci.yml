@@ -13,7 +13,7 @@ jobs:
           - name: testami2
             profile: testprofile2
     steps:
-    # - uses: actions/checkout@v1
+    - uses: actions/checkout@v1
     - name: test
       run: echo "Running ${AWS_NAME} with ${AWS_PROFILE}"
       env:
@@ -24,7 +24,9 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: vghn/ansible
-    - run: ls -lah
+        path: ../ansible
+    - run: ls -lah ./
+    - run: ls -lah ../
     # - name: Set up Python
     #   uses: actions/setup-python@v1
     # - name: Install dependencies
