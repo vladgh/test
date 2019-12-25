@@ -25,6 +25,7 @@ jobs:
       with:
         repository: vghn/ansible
         path: ansible
+    - run: git clone https://github.com/vghn/ansible ../ansible
     - run: ls -lah ./
     - run: ls -lah ../
     # - name: Set up Python
