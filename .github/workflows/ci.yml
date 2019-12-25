@@ -20,24 +20,21 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: test
-      run: echo "Running ${AWS_NAME} with ${AWS_PROFILE}"
-      env:
-        AWS_NAME: ${{ matrix.ami.name }}
-        AWS_PROFILE: ${{ matrix.ami.profile }}
+      run: echo "Running ${matrix.ami.name} with ${AWS_PROFILE}"
       if: matrix.ami.name != 'testami1'
-    - run: git clone https://github.com/vghn/ansible ../ansible
-    - name: Install Packer
-      run: |
-            wget -q "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
-            wget -qO - "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
-            sudo unzip -d /usr/local/bin/ "packer_${PACKER_VERSION}_linux_amd64.zip"
-            packer version
-    - name: Install Vault
-      run: |
-            wget -q "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip"
-            wget -qO - "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
-            sudo unzip -d /usr/local/bin/ "vault_${VAULT_VERSION}_linux_amd64.zip"
-            vault version
+    # - run: git clone https://github.com/vghn/ansible ../ansible
+    # - name: Install Packer
+    #   run: |
+    #         wget -q "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
+    #         wget -qO - "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
+    #         sudo unzip -d /usr/local/bin/ "packer_${PACKER_VERSION}_linux_amd64.zip"
+    #         packer version
+    # - name: Install Vault
+    #   run: |
+    #         wget -q "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip"
+    #         wget -qO - "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
+    #         sudo unzip -d /usr/local/bin/ "vault_${VAULT_VERSION}_linux_amd64.zip"
+    #         vault version
     # - name: Set up Python
     #   uses: actions/setup-python@v1
     # - name: Install dependencies
