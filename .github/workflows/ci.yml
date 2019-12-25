@@ -8,8 +8,10 @@ jobs:
     strategy:
       matrix:
         ami:
-          - name: testami
-            profile: testprofile
+          - name: testami1
+            profile: testprofile1
+          - name: testami2
+            profile: testprofile2
     steps:
     # - uses: actions/checkout@v1
     - run: echo "Running ${{ matrix.ami.name }} with ${{ matrix.ami.profile }}"
