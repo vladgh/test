@@ -5,23 +5,33 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      PACKER_VERSION: '1.5.1'
-      VAULT_VERSION: '1.3.1'
-      VAULT_ADDR: 'https://vault.ghn.me:8200'
-      AWS_PROFILE: ${{ matrix.ami.profile }}
-    strategy:
-      matrix:
-        ami:
-          - name: testami1
-            profile: testprofile1
-          - name: testami2
-            profile: testprofile2
     steps:
-    - uses: actions/checkout@v1
-    - name: test
-      run: echo "Running ${matrix.ami.name} with ${AWS_PROFILE}"
-      if: matrix.ami.name != 'testami1'
+    - uses: actions/checkout@v2
+
+
+
+
+  # build:
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     PACKER_VERSION: '1.5.1'
+  #     VAULT_VERSION: '1.3.1'
+  #     VAULT_ADDR: 'https://vault.ghn.me:8200'
+  #     AWS_PROFILE: ${{ matrix.ami.profile }}
+  #   strategy:
+  #     matrix:
+  #       ami:
+  #         - name: testami1
+  #           profile: testprofile1
+  #         - name: testami2
+  #           profile: testprofile2
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: test
+  #     run: echo "Running ${matrix.ami.name} with ${AWS_PROFILE}"
+  #     if: matrix.ami.name != 'testami1'
+
+
     # - run: git clone https://github.com/vghn/ansible ../ansible
     # - name: Install Packer
     #   run: |
