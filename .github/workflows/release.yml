@@ -33,10 +33,15 @@ jobs:
       run: echo ::set-env name=PATCH::$((PATCH+1))
       if: "contains(github.event.issue.labels.*.name, 'Type: Bug')"
     - name: Generate Changelog
+      run: docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release "v${MAJOR}.${MINOR}.${PATCH}"
+    - name: Configure git
       run: |
-        docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release "v${MAJOR}.${MINOR}.${PATCH}"
-    - run: cat CHANGELOG.md
-    - run: |
         git config user.name "GitHub Release Bot"
         git config user.email "vladgh@users.noreply.github.com"
+    - name: Commit CHANGELOG.md
+      run: |
         git add CHANGELOG.md && git commit -m 'Update changelog' && git push origin master
+    - name: Commit CHANGELOG.md
+      run: |
+        git tag "v${MAJOR}.${MINOR}.${PATCH}" --message "Release v${MAJOR}.${MINOR}.${PATCH}"
+        git push --follow-tags
