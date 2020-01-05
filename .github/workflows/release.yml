@@ -17,24 +17,24 @@ jobs:
     - name: Break the semantic version into components
       run: |
         semver="$(git describe --always --tags)"
-        echo $semver
         semver="${semver#v}" # Remove the 'v' prefix
-        echo $semver
         semver="${semver%%-*}" # Remove the commit number
-        echo $semver
         IFS="." read -r -a semver <<< "$semver" # Create an array with version numbers
-        echo ${semver[0]}
-        echo ${semver[1]}
-        echo ${semver[2]}
         echo ::set-env name=MAJOR::${semver[0]}
         echo ::set-env name=MINOR::${semver[1]}
         echo ::set-env name=PATCH::${semver[2]}
-    - name: Test
-      run: echo 'exists'
+    - name: Increment major version
+      run: echo ::set-env name=MAJOR::$((MAJOR+1))
+      if: "contains(github.event.issue.labels.*.name, 'Backwards incompatible')"
+    - name: Increment minor version
+      run: echo ::set-env name=MINOR::$((MINOR+1))
+      if: "contains(github.event.issue.labels.*.name, 'Type: Enhancement')"
+    - name: Increment patch version
+      run: echo ::set-env name=PATCH::$((PATCH+1))
       if: "contains(github.event.issue.labels.*.name, 'Type: Bug')"
     - name: Generate Changelog
       run: |
-        docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release "${MAJOR}.${MINOR}.${PATCH}"
+        docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release "v${MAJOR}.${MINOR}.${PATCH}"
     - run: cat CHANGELOG.md
     - run: |
         git config user.name "GitHub Release Bot"
