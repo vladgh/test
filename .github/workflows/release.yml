@@ -1,0 +1,19 @@
+name: Release
+
+on:
+  pull_request:
+    types: [closed]
+
+  release:
+    types: [published]
+
+  issues:
+    types: [closed, edited]
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Generate Changelog
+      run: "docker run -it --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test --future-release --bug-labels 'Type: Bug' --enhancement-labels 'Type: Enhancement'"
