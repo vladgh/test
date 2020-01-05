@@ -42,6 +42,7 @@ jobs:
       run: |
         if ! git diff --quiet HEAD; then
           git fetch
+          git pull
           git add CHANGELOG.md
           git commit -m 'Update changelog'
           git push origin master
