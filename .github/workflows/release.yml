@@ -13,10 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        array = ${{ github.event.issue.labels }}
+        array=${{ github.event.issue.labels }}
         echo "${array[*]}"
     - run: |
-        array = ${{ github.event.pull_request.labels }}
+        array=${{ github.event.pull_request.labels }}
         echo "${array[*]}"
     - name: Generate Changelog
       run: |
