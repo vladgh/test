@@ -32,16 +32,14 @@ jobs:
     - name: Increment patch version
       run: echo ::set-env name=PATCH::$((PATCH+1))
       if: "contains(github.event.issue.labels.*.name, 'Type: Bug')"
-    - name: Get docker images
-      run: docker pull ferrarimarco/github-changelog-generator
+    - name: Generate Changelog
+      run: docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release "v${MAJOR}.${MINOR}.${PATCH}"
     - name: Configure git
       run: |
-        git config user.name "GitHub Release Bot"
-        git config user.email "vladgh@users.noreply.github.com"
-    - name: Generate Changelog
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
+    - name: Commit CHANGELOG.md
       run: |
-        git fetch && git pull
-        docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release "v${MAJOR}.${MINOR}.${PATCH}"
         if ! git diff --quiet HEAD; then
           git add CHANGELOG.md && git commit -m 'Update changelog'
           git push origin master
