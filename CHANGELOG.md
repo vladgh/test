@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/vladgh/test/tree/HEAD)
+## [v2.0.1](https://github.com/vladgh/test/tree/v2.0.1) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.0.1...HEAD)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.0.1...v2.0.1)
 
 **Fixed bugs:**
 
