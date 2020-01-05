@@ -40,7 +40,12 @@ jobs:
         git config user.email "vladgh@users.noreply.github.com"
     - name: Commit CHANGELOG.md
       run: |
-        if ! git diff --quiet HEAD; then git add CHANGELOG.md && git commit -m 'Update changelog' && git push origin master; fi
+        if ! git diff --quiet HEAD; then
+          git pull
+          git add CHANGELOG.md
+          git commit -m 'Update changelog'
+          git push origin master
+        fi
     - name: Tag release
       run: |
         git tag "v${MAJOR}.${MINOR}.${PATCH}" --message "Release v${MAJOR}.${MINOR}.${PATCH}"
