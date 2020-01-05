@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: echo ""${${{ github.event.pull_request.labels }}[*]}"
-    - run: echo ""${${{ github.event.issue.labels }}[*]}"
+    - run: echo "${${{ github.event.pull_request.labels }}[*]}"
+    - run: echo "${${{ github.event.issue.labels }}[*]}"
     - name: Generate Changelog
       run: |
         docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release $(git describe --always --tags)
