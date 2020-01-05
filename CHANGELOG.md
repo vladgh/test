@@ -1,8 +1,12 @@
 # Changelog
 
-## [cd33969](https://github.com/vladgh/test/tree/cd33969) (2020-01-05)
+## [af052c3](https://github.com/vladgh/test/tree/af052c3) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...cd33969)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...af052c3)
+
+**Implemented enhancements:**
+
+- enhance [\#7](https://github.com/vladgh/test/issues/7)
 
 **Fixed bugs:**
 
@@ -51,10 +55,6 @@
 ## [v2.1.0](https://github.com/vladgh/test/tree/v2.1.0) (2020-01-05)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.0.7...v2.1.0)
-
-**Implemented enhancements:**
-
-- enhance [\#7](https://github.com/vladgh/test/issues/7)
 
 ## [v2.0.7](https://github.com/vladgh/test/tree/v2.0.7) (2020-01-05)
 
