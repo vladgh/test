@@ -41,10 +41,8 @@ jobs:
     - name: Commit CHANGELOG.md
       run: |
         if ! git diff --quiet HEAD; then
-          git add CHANGELOG.md
-          git commit -m 'Update changelog'
-          git fetch
-          git pull
+          git fetch && git pull
+          git add CHANGELOG.md && git commit -m 'Update changelog'
           git push origin master
         fi
     - name: Tag release
