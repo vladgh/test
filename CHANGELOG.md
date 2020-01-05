@@ -1,12 +1,16 @@
 # Changelog
 
-## [v2.7.14](https://github.com/vladgh/test/tree/v2.7.14) (2020-01-05)
+## [v2.8.14](https://github.com/vladgh/test/tree/v2.8.14) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.7.13...v2.7.14)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.7.14...v2.8.14)
 
 **Implemented enhancements:**
 
 - enhance [\#7](https://github.com/vladgh/test/issues/7)
+
+## [v2.7.14](https://github.com/vladgh/test/tree/v2.7.14) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.7.13...v2.7.14)
 
 **Fixed bugs:**
 
