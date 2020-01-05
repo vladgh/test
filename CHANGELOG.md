@@ -1,20 +1,24 @@
 # Changelog
 
-## [v2.6.13](https://github.com/vladgh/test/tree/v2.6.13) (2020-01-05)
+## [v2.7.13](https://github.com/vladgh/test/tree/v2.7.13) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.6.12...v2.6.13)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.6.13...v2.7.13)
+
+**Implemented enhancements:**
+
+- enhance [\#7](https://github.com/vladgh/test/issues/7)
 
 **Fixed bugs:**
 
 - bug [\#8](https://github.com/vladgh/test/issues/8)
 
+## [v2.6.13](https://github.com/vladgh/test/tree/v2.6.13) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.6.12...v2.6.13)
+
 ## [v2.6.12](https://github.com/vladgh/test/tree/v2.6.12) (2020-01-05)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.5.12...v2.6.12)
-
-**Implemented enhancements:**
-
-- enhance [\#7](https://github.com/vladgh/test/issues/7)
 
 ## [v2.5.12](https://github.com/vladgh/test/tree/v2.5.12) (2020-01-05)
 
@@ -54,27 +58,27 @@
 
 ## [v2.1.7](https://github.com/vladgh/test/tree/v2.1.7) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.6...v2.1.7)
-
-## [v2.1.6](https://github.com/vladgh/test/tree/v2.1.6) (2020-01-05)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.5...v2.1.6)
-
-## [v2.1.5](https://github.com/vladgh/test/tree/v2.1.5) (2020-01-05)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.4...v2.1.5)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.4...v2.1.7)
 
 ## [v2.1.4](https://github.com/vladgh/test/tree/v2.1.4) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.4)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.5...v2.1.4)
 
-## [v2.1.3](https://github.com/vladgh/test/tree/v2.1.3) (2020-01-05)
+## [v2.1.5](https://github.com/vladgh/test/tree/v2.1.5) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.2...v2.1.3)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.6...v2.1.5)
+
+## [v2.1.6](https://github.com/vladgh/test/tree/v2.1.6) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.2...v2.1.6)
 
 ## [v2.1.2](https://github.com/vladgh/test/tree/v2.1.2) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.1...v2.1.2)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.2)
+
+## [v2.1.3](https://github.com/vladgh/test/tree/v2.1.3) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.1...v2.1.3)
 
 ## [v2.1.1](https://github.com/vladgh/test/tree/v2.1.1) (2020-01-05)
 
