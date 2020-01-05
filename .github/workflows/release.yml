@@ -4,11 +4,8 @@ on:
   pull_request:
     types: [closed]
 
-  release:
-    types: [published]
-
   issues:
-    types: [closed, edited]
+    types: [closed]
 
 jobs:
   changelog:
@@ -17,3 +14,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Generate Changelog
       run: "docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test --future-release --bug-labels 'Type: Bug' --enhancement-labels 'Type: Enhancement'"
+    - run: cat CHANGELOG.md
