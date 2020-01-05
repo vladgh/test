@@ -1,8 +1,8 @@
 # Changelog
 
-## [11e8de9](https://github.com/vladgh/test/tree/11e8de9) (2020-01-05)
+## [247b855..](https://github.com/vladgh/test/tree/247b855..) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...11e8de9)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...247b855..)
 
 **Implemented enhancements:**
 
