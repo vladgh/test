@@ -15,3 +15,4 @@ jobs:
     - name: Generate Changelog
       run: "docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test --bug-labels 'Type: Bug' --enhancement-labels 'Type: Enhancement'"
     - run: cat CHANGELOG.md
+    - run: git add CHANGELOG.md && git commit -m 'Update changelog'
