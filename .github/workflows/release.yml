@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Fetch all tags
-      run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    - name: Fetch all history for all tags and branches
+      run: git fetch --prune --unshallow
     - name: Break the semantic version into components
       run: |
         semver="$(git describe --always --tags)"
