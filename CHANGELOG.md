@@ -1,8 +1,8 @@
 # Changelog
 
-## [v2.4.12](https://github.com/vladgh/test/tree/v2.4.12) (2020-01-05)
+## [v2.5.12](https://github.com/vladgh/test/tree/v2.5.12) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.4.11...v2.4.12)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.4.12...v2.5.12)
 
 **Implemented enhancements:**
 
@@ -11,6 +11,10 @@
 **Fixed bugs:**
 
 - bug [\#8](https://github.com/vladgh/test/issues/8)
+
+## [v2.4.12](https://github.com/vladgh/test/tree/v2.4.12) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.4.11...v2.4.12)
 
 ## [v2.4.11](https://github.com/vladgh/test/tree/v2.4.11) (2020-01-05)
 
@@ -54,15 +58,15 @@
 
 ## [v2.1.4](https://github.com/vladgh/test/tree/v2.1.4) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.4)
-
-## [v2.1.3](https://github.com/vladgh/test/tree/v2.1.3) (2020-01-05)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.2...v2.1.3)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.2...v2.1.4)
 
 ## [v2.1.2](https://github.com/vladgh/test/tree/v2.1.2) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.1...v2.1.2)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.2)
+
+## [v2.1.3](https://github.com/vladgh/test/tree/v2.1.3) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.1...v2.1.3)
 
 ## [v2.1.1](https://github.com/vladgh/test/tree/v2.1.1) (2020-01-05)
 
@@ -114,23 +118,23 @@
 
 ## [v1.4.1](https://github.com/vladgh/test/tree/v1.4.1) (2020-01-04)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v1.3.0...v1.4.1)
-
-## [v1.3.0](https://github.com/vladgh/test/tree/v1.3.0) (2019-12-25)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v1.3.2...v1.3.0)
-
-## [v1.3.2](https://github.com/vladgh/test/tree/v1.3.2) (2019-12-25)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v1.3.1...v1.3.2)
+[Full Changelog](https://github.com/vladgh/test/compare/v1.3.1...v1.4.1)
 
 ## [v1.3.1](https://github.com/vladgh/test/tree/v1.3.1) (2019-12-25)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v1.3.3...v1.3.1)
+[Full Changelog](https://github.com/vladgh/test/compare/v1.3.2...v1.3.1)
+
+## [v1.3.2](https://github.com/vladgh/test/tree/v1.3.2) (2019-12-25)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v1.3.3...v1.3.2)
 
 ## [v1.3.3](https://github.com/vladgh/test/tree/v1.3.3) (2019-12-25)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v1.4.0...v1.3.3)
+[Full Changelog](https://github.com/vladgh/test/compare/v1.3.0...v1.3.3)
+
+## [v1.3.0](https://github.com/vladgh/test/tree/v1.3.0) (2019-12-25)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v1.4.0...v1.3.0)
 
 ## [v1.4.0](https://github.com/vladgh/test/tree/v1.4.0) (2019-12-25)
 
