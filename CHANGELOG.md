@@ -1,8 +1,8 @@
 # Changelog
 
-## [72fcab4](https://github.com/vladgh/test/tree/72fcab4) (2020-01-05)
+## [a43b486](https://github.com/vladgh/test/tree/a43b486) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...72fcab4)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...a43b486)
 
 **Fixed bugs:**
 
