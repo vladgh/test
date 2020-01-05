@@ -11,7 +11,16 @@ jobs:
   changelog:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@latest
+    - name: Break the semantic version into components
+      run: |
+        tag="$(git describe --always --tags)"
+        semver="${tag#v}" # Remove the 'v' prefix
+        semver="${semver%%-*}" # Remove the commit number
+        IFS="." read -r -a semver <<< "$semver" # Create an array with version numbers
+        echo ::set-env name=MAJOR::${semver[0]}
+        echo ::set-env name=MINOR::${semver[1]}
+        echo ::set-env name=PATCH::${semver[2]}
     - name: Test
       run: echo 'exists'
       if: "contains(github.event.issue.labels.*.name, 'Type: Bug')"
