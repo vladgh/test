@@ -13,11 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        array=${{ github.event.issue.labels }}
-        echo "${array[*]}"
-    - run: |
-        array=${{ github.event.pull_request.labels }}
-        echo "${array[*]}"
+        echo "${{ github.event.issue.labels.*.name }}"
     - name: Generate Changelog
       run: |
         docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release $(git describe --always --tags)
