@@ -1,8 +1,8 @@
 # Changelog
 
-## [a43b486](https://github.com/vladgh/test/tree/a43b486) (2020-01-05)
+## [cd33969](https://github.com/vladgh/test/tree/cd33969) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...a43b486)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.10...cd33969)
 
 **Fixed bugs:**
 
