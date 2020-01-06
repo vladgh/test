@@ -6,7 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - run: echo Hello, world!
+    # - uses: actions/checkout@v2
 
 
 
@@ -26,7 +27,7 @@ jobs:
   #         - name: testami2
   #           profile: testprofile2
   #   steps:
-  #   - uses: actions/checkout@v1
+  #   - uses: actions/checkout@v2
   #   - name: test
   #     run: echo "Running ${matrix.ami.name} with ${AWS_PROFILE}"
   #     if: matrix.ami.name != 'testami1'
