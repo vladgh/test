@@ -1,20 +1,24 @@
 # Changelog
 
-## [v2.8.19](https://github.com/vladgh/test/tree/v2.8.19) (2020-01-06)
+## [v2.8.20](https://github.com/vladgh/test/tree/v2.8.20) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.19)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.20)
 
 ## [v2.8.18](https://github.com/vladgh/test/tree/v2.8.18) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.16...v2.8.18)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.19...v2.8.18)
 
-## [v2.8.16](https://github.com/vladgh/test/tree/v2.8.16) (2020-01-06)
+## [v2.8.19](https://github.com/vladgh/test/tree/v2.8.19) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.17...v2.8.16)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.17...v2.8.19)
 
 ## [v2.8.17](https://github.com/vladgh/test/tree/v2.8.17) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.15...v2.8.17)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.16...v2.8.17)
+
+## [v2.8.16](https://github.com/vladgh/test/tree/v2.8.16) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.15...v2.8.16)
 
 **Fixed bugs:**
 
@@ -102,15 +106,15 @@
 
 ## [v2.1.4](https://github.com/vladgh/test/tree/v2.1.4) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.2...v2.1.4)
-
-## [v2.1.2](https://github.com/vladgh/test/tree/v2.1.2) (2020-01-05)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.2)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.4)
 
 ## [v2.1.3](https://github.com/vladgh/test/tree/v2.1.3) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.1...v2.1.3)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.2...v2.1.3)
+
+## [v2.1.2](https://github.com/vladgh/test/tree/v2.1.2) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.1...v2.1.2)
 
 ## [v2.1.1](https://github.com/vladgh/test/tree/v2.1.1) (2020-01-05)
 
