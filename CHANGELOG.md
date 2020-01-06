@@ -1,8 +1,24 @@
 # Changelog
 
+## [v2.9.0](https://github.com/vladgh/test/tree/v2.9.0) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.21...v2.9.0)
+
+**Implemented enhancements:**
+
+- Just a clean-up PR [\#10](https://github.com/vladgh/test/pull/10) ([vladgh](https://github.com/vladgh))
+
+## [v2.8.21](https://github.com/vladgh/test/tree/v2.8.21) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.20...v2.8.21)
+
 ## [v2.8.20](https://github.com/vladgh/test/tree/v2.8.20) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.20)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.16...v2.8.20)
+
+## [v2.8.16](https://github.com/vladgh/test/tree/v2.8.16) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.16)
 
 ## [v2.8.18](https://github.com/vladgh/test/tree/v2.8.18) (2020-01-06)
 
@@ -14,11 +30,7 @@
 
 ## [v2.8.17](https://github.com/vladgh/test/tree/v2.8.17) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.16...v2.8.17)
-
-## [v2.8.16](https://github.com/vladgh/test/tree/v2.8.16) (2020-01-06)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.15...v2.8.16)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.15...v2.8.17)
 
 **Fixed bugs:**
 
