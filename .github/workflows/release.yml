@@ -3,13 +3,13 @@ name: Release
 on:
   pull_request:
     types: [closed]
-
-  issues:
-    types: [closed]
+  # issues:
+  #   types: [closed]
 
 jobs:
   changelog:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
     - uses: actions/checkout@v2
     - name: Fetch all history for all tags and branches
