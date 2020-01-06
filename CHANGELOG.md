@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.8.16](https://github.com/vladgh/test/tree/v2.8.16) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.15...v2.8.16)
+
+**Fixed bugs:**
+
+- Testing [\#9](https://github.com/vladgh/test/pull/9) ([vladgh](https://github.com/vladgh))
+
 ## [v2.8.15](https://github.com/vladgh/test/tree/v2.8.15) (2020-01-05)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.8.14...v2.8.15)
