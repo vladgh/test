@@ -1,5 +1,7 @@
 name: Release
 
+
+
 on:
   pull_request:
     types: [closed]
@@ -9,7 +11,7 @@ on:
 jobs:
   changelog:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     steps:
     - run: echo Hello, world!
     # - uses: actions/checkout@v2
