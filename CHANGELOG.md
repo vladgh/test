@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.10.1](https://github.com/vladgh/test/tree/v2.10.1) (2020-01-16)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.10.0...v2.10.1)
+
+**Implemented enhancements:**
+
+- Testing releases [\#11](https://github.com/vladgh/test/issues/11)
+
 ## [v2.10.0](https://github.com/vladgh/test/tree/v2.10.0) (2020-01-16)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.9.2...v2.10.0)
@@ -38,15 +46,15 @@
 
 ## [v2.8.20](https://github.com/vladgh/test/tree/v2.8.20) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.19...v2.8.20)
-
-## [v2.8.19](https://github.com/vladgh/test/tree/v2.8.19) (2020-01-06)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.19)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.20)
 
 ## [v2.8.18](https://github.com/vladgh/test/tree/v2.8.18) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.17...v2.8.18)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.19...v2.8.18)
+
+## [v2.8.19](https://github.com/vladgh/test/tree/v2.8.19) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.17...v2.8.19)
 
 ## [v2.8.17](https://github.com/vladgh/test/tree/v2.8.17) (2020-01-06)
 
@@ -122,11 +130,7 @@
 
 ## [v2.1.7](https://github.com/vladgh/test/tree/v2.1.7) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.4...v2.1.7)
-
-## [v2.1.4](https://github.com/vladgh/test/tree/v2.1.4) (2020-01-05)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.5...v2.1.4)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.5...v2.1.7)
 
 ## [v2.1.5](https://github.com/vladgh/test/tree/v2.1.5) (2020-01-05)
 
@@ -134,7 +138,11 @@
 
 ## [v2.1.6](https://github.com/vladgh/test/tree/v2.1.6) (2020-01-05)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.6)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.4...v2.1.6)
+
+## [v2.1.4](https://github.com/vladgh/test/tree/v2.1.4) (2020-01-05)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.1.3...v2.1.4)
 
 ## [v2.1.3](https://github.com/vladgh/test/tree/v2.1.3) (2020-01-05)
 
