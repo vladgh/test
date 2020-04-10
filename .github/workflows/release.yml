@@ -37,6 +37,10 @@ jobs:
     #   if: "contains(github.event.issue.labels.*.name, 'Type: Bug')"
     # - name: Generate Changelog
     #   run: docker run --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user "$(dirname $GITHUB_REPOSITORY)" --project "$(basename $GITHUB_REPOSITORY)" --future-release "v${MAJOR}.${MINOR}.${PATCH}"
+    # - name: Configure git as github actions
+    #   run: |
+    #     git config --local user.name "GitHub Action"
+    #     git config --local user.email "action@github.com"
     # - name: Configure git
     #   run: |
     #     git config user.name "${GITHUB_ACTOR}"
