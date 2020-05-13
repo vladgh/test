@@ -47,7 +47,7 @@ jobs:
     #         sudo unzip -d /usr/local/bin/ "vault_${VAULT_VERSION}_linux_amd64.zip"
     #         vault version
     # - name: Set up Python
-    #   uses: actions/setup-python@v1
+    #   uses: actions/setup-python@v2
     # - name: Install dependencies
     #   run: |
     #     python3 -m pip install --upgrade pip ansible hvac pycrypto aws-amicleaner future
