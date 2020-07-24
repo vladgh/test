@@ -1,5 +1,17 @@
 # Changelog
 
+## [v2.11.0](https://github.com/vladgh/test/tree/v2.11.0) (2020-07-24)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.10.3...v2.11.0)
+
+**Implemented enhancements:**
+
+- good to go [\#14](https://github.com/vladgh/test/issues/14)
+
+## [v2.10.3](https://github.com/vladgh/test/tree/v2.10.3) (2020-07-24)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.10.2...v2.10.3)
+
 ## [v2.10.2](https://github.com/vladgh/test/tree/v2.10.2) (2020-07-24)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.10.1...v2.10.2)
@@ -58,15 +70,15 @@
 
 ## [v2.8.20](https://github.com/vladgh/test/tree/v2.8.20) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.20)
-
-## [v2.8.18](https://github.com/vladgh/test/tree/v2.8.18) (2020-01-06)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.19...v2.8.18)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.19...v2.8.20)
 
 ## [v2.8.19](https://github.com/vladgh/test/tree/v2.8.19) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.17...v2.8.19)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.19)
+
+## [v2.8.18](https://github.com/vladgh/test/tree/v2.8.18) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.17...v2.8.18)
 
 ## [v2.8.17](https://github.com/vladgh/test/tree/v2.8.17) (2020-01-06)
 
