@@ -1,5 +1,17 @@
 # Changelog
 
+## [v2.10.2](https://github.com/vladgh/test/tree/v2.10.2) (2020-07-24)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.10.1...v2.10.2)
+
+**Implemented enhancements:**
+
+- test enhancement [\#13](https://github.com/vladgh/test/issues/13)
+
+**Fixed bugs:**
+
+- test bug [\#12](https://github.com/vladgh/test/issues/12)
+
 ## [v2.10.1](https://github.com/vladgh/test/tree/v2.10.1) (2020-01-16)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.10.0...v2.10.1)
