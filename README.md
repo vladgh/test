@@ -2,4 +2,4 @@
 
 ![Build Status](https://github.com/vladgh/test/workflows/CI/badge.svg)
 
-Making a bug
+Making a test bug
