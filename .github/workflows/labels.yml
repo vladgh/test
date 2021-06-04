@@ -1,10 +1,10 @@
-name: Create Labels
+name: Labels
 
-on: issues
+on: [push, pull_request, issues]
 
 jobs:
   labels:
-    name: Labels Actions
+    name: Label Actions
     runs-on: ubuntu-latest
     steps:
       - uses: lannonbr/issue-label-manager-action@3
