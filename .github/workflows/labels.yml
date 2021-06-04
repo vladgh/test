@@ -1,0 +1,14 @@
+name: Create Labels
+
+on: issues
+
+jobs:
+  labels:
+    name: Labels Actions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lannonbr/issue-label-manager-action@3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          delete: true # will delete any labels that aren't in the .github/labels.json
