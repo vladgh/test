@@ -7,7 +7,7 @@ jobs:
     name: Label Actions
     runs-on: ubuntu-latest
     steps:
-      - uses: lannonbr/issue-label-manager-action@3
+      - uses: lannonbr/issue-label-manager-action@3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
