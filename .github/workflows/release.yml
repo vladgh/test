@@ -1,3 +1,42 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      versionNumber:
+        description: 'Number of version (ex: v1.2.3)'
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build Changelog
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@v1
+        with:
+          configuration: .github/release.json
+          outputFile: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Changelog for ${{ github.event.inputs.versionNumber }}
+          file_pattern: CHANGELOG.md
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.event.inputs.versionNumber }}
+          release_name: Release ${{ github.event.inputs.versionNumber }}
+          body: ${{steps.github_release.outputs.changelog}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 # name: Release
 
 # on:
