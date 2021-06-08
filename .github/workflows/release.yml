@@ -18,6 +18,7 @@ jobs:
         id: github_release
         uses: mikepenz/release-changelog-builder-action@v1
         with:
+          toTag: ${{ github.event.inputs.versionNumber }}
           configuration: .github/release.json
           outputFile: CHANGELOG.md
         env:
