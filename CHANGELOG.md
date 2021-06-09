@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.21.5](https://github.com/vladgh/test/tree/v2.21.5) (2021-06-09)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.21.4...v2.21.5)
+
+**Fixed bugs:**
+
+- hmmmm [\#52](https://github.com/vladgh/test/issues/52)
+
 ## [v2.21.4](https://github.com/vladgh/test/tree/v2.21.4) (2021-06-09)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.21.3...v2.21.4)
