@@ -21,7 +21,7 @@ jobs:
         with:
           commit_message: Update Changelog for ${{ env.RELEASE_VERSION }}
           file_pattern: testfile
-
+          token: ${{ secrets.PAT }}
 
 
   # build:

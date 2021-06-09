@@ -29,11 +29,12 @@ jobs:
           outputFile: CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+      - run: date >> testfile
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Changelog for ${{ github.ref }}
-          file_pattern: CHANGELOG.md
+          file_pattern: testfile
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         uses: actions/create-release@v1
