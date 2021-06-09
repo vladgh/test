@@ -2,19 +2,19 @@
   "categories": [
     {
       "title": "## 🔨 Breaking",
-      "labels": ["Type: Breaking"]
+      "labels": ["breaking"]
     },
     {
       "title": "## 🚀 Features",
-      "labels": ["Type: Enhancement"]
+      "labels": ["enhancement"]
     },
     {
       "title": "## 🐛 Fixes",
-      "labels": ["Type: Bug"]
+      "labels": ["bug"]
     },
     {
       "title": "## 👋 Deprecated",
-      "labels": ["Type: Deprecated"]
+      "labels": ["deprecated"]
     }
   ],
   "ignore_labels": [
