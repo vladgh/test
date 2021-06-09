@@ -9,6 +9,7 @@ on:
 
 jobs:
   release:
+    name: Release v${{ github.event.inputs.versionName }}
     runs-on: ubuntu-latest
     steps:
       - name: Check version name
