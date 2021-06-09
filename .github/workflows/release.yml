@@ -34,7 +34,7 @@ jobs:
         with:
           commit_message: Update Changelog for ${{ github.ref }}
           file_pattern: testfile
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
 
       - name: Create Release
         uses: actions/create-release@v1
