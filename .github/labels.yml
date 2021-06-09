@@ -26,3 +26,12 @@
 - color: ffffff
   name: wontfix
   description: This will not be worked on
+- color: d73a4a
+  name: breaking
+  description: Introduces a breaking change
+- color: e4e669
+  name: deprecated
+  description: Will be removed soon
+- color: e4e669
+  name: ignore
+  description: This will be ignored
