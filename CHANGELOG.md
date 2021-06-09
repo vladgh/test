@@ -1,5 +1,9 @@
 # Changelog
 
+## [v2.21.3](https://github.com/vladgh/test/tree/v2.21.3) (2021-06-09)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.21.2...v2.21.3)
+
 ## [v2.21.2](https://github.com/vladgh/test/tree/v2.21.2) (2021-06-09)
 
 [Full Changelog](https://github.com/vladgh/test/compare/v2.21.1...v2.21.2)
@@ -131,19 +135,19 @@
 
 ## [v2.19.1](https://github.com/vladgh/test/tree/v2.19.1) (2021-06-08)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.18.8...v2.19.1)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.19.0...v2.19.1)
 
 **Merged pull requests:**
 
 - Just a test [\#34](https://github.com/vladgh/test/pull/34) ([vladgh](https://github.com/vladgh))
 
-## [v2.18.8](https://github.com/vladgh/test/tree/v2.18.8) (2021-06-08)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.19.0...v2.18.8)
-
 ## [v2.19.0](https://github.com/vladgh/test/tree/v2.19.0) (2021-06-08)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.18.7...v2.19.0)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.18.8...v2.19.0)
+
+## [v2.18.8](https://github.com/vladgh/test/tree/v2.18.8) (2021-06-08)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.18.7...v2.18.8)
 
 **Merged pull requests:**
 
@@ -334,7 +338,11 @@
 
 ## [v2.8.16](https://github.com/vladgh/test/tree/v2.8.16) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.16)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.19...v2.8.16)
+
+## [v2.8.19](https://github.com/vladgh/test/tree/v2.8.19) (2020-01-06)
+
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.18...v2.8.19)
 
 ## [v2.8.18](https://github.com/vladgh/test/tree/v2.8.18) (2020-01-06)
 
@@ -342,11 +350,7 @@
 
 ## [v2.8.17](https://github.com/vladgh/test/tree/v2.8.17) (2020-01-06)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.19...v2.8.17)
-
-## [v2.8.19](https://github.com/vladgh/test/tree/v2.8.19) (2020-01-06)
-
-[Full Changelog](https://github.com/vladgh/test/compare/v2.8.15...v2.8.19)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.8.15...v2.8.17)
 
 **Merged pull requests:**
 
