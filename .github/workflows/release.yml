@@ -13,10 +13,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: master
 
-      - run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test generate_changelog --header-label "Release_v${{ github.event.inputs.versionName }}" --unreleased-only --future-release "v${{ github.event.inputs.versionName }}" --output release_notes.md
-        # with:
-        #   ref: master
+      - name: Generate CHANGELOG.md
+        run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test generate_changelog --future-release "v${{ github.event.inputs.versionName }}"
+
+      - name: Generate release notes
+        run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test generate_changelog --future-release "v${{ github.event.inputs.versionName }}" --unreleased-only --output release_notes.md
 
       # - name: Build Changelog
       #   id: build_changelog
@@ -26,12 +30,12 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # # - uses: stefanzweifel/git-auto-commit-action@v4
-      # #   with:
-      # #     commit_message: Update Changelog for ${{ github.ref }}
-      # #     file_pattern: CHANGELOG.md
-      # #   env:
-      # #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Changelog for v${{ github.event.inputs.versionName }}
+          file_pattern: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         uses: actions/create-release@v1
