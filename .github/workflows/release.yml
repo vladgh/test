@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test generate_changelog --header-label "Release_v${{ github.event.inputs.versionName }}" --unreleased-only --future-release "v${{ github.event.inputs.versionName }}"
+      - run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test generate_changelog --header-label "Release_v${{ github.event.inputs.versionName }}" --unreleased-only --future-release "v${{ github.event.inputs.versionName }}" --output release_notes.md
         # with:
         #   ref: master
 
@@ -33,14 +33,14 @@ jobs:
       # #   env:
       # #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Create Release
-      #   uses: actions/create-release@v1
-      #   with:
-      #     tag_name: ${{steps.build_changelog.outputs.toTag}}
-      #     release_name: Release ${{steps.build_changelog.outputs.toTag}}
-      #     body: ${{steps.build_changelog.outputs.changelog}}
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ github.event.inputs.versionName }}
+          release_name: Release v${{ github.event.inputs.versionName }}
+          body_path: release_notes.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 # name: Release
 
