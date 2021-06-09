@@ -12,31 +12,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: master
+        # with:
+        #   ref: master
 
       - name: Build Changelog
-        id: github_release
+        id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v1
         with:
-          configuration: .github/release.json
-          outputFile: CHANGELOG.md
+          configuration: .github/changelog.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Changelog for ${{ github.ref }}
-          file_pattern: CHANGELOG.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: Update Changelog for ${{ github.ref }}
+      #     file_pattern: CHANGELOG.md
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: ${{steps.github_release.outputs.changelog}}
+          tag_name: ${{steps.build_changelog.outputs.toTag}}
+          release_name: Release ${{steps.build_changelog.outputs.toTag}}
+          body: ${{steps.build_changelog.outputs.changelog}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
