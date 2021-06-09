@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.PAT }}
+          ref: master
 
       - name: Build Changelog
         id: github_release
@@ -34,6 +34,7 @@ jobs:
         with:
           commit_message: Update Changelog for ${{ github.ref }}
           file_pattern: testfile
+          ref: master
 
       - name: Create Release
         uses: actions/create-release@v1
