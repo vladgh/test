@@ -1,11 +1,16 @@
 name: Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      versionNumber:
-        description: 'Number of version (ex: v1.2.3)'
-        required: true
+  push:
+    tags:
+      - 'v*'
+
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       versionNumber:
+#         description: 'Number of version (ex: v1.2.3)'
+#         required: true
 
 jobs:
   release:
@@ -18,7 +23,6 @@ jobs:
         id: github_release
         uses: mikepenz/release-changelog-builder-action@v1
         with:
-          toTag: ${{ github.event.inputs.versionNumber }}
           configuration: .github/release.json
           outputFile: CHANGELOG.md
         env:
@@ -26,14 +30,14 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update Changelog for ${{ github.event.inputs.versionNumber }}
+          commit_message: Update Changelog for ${{ github.ref }}
           file_pattern: CHANGELOG.md
 
       - name: Create Release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ github.event.inputs.versionNumber }}
-          release_name: Release ${{ github.event.inputs.versionNumber }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           body: ${{steps.github_release.outputs.changelog}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
