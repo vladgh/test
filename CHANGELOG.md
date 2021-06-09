@@ -1,5 +1,4 @@
 ## 🐛 Fixes
 
-- Fix Release again (PR: #45)
-- Fix token (PR: #46)
+- FInal test if replacing changelog (PR: #47)
 
