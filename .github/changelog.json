@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "title": "## 🧪 Breaking",
+      "title": "## 🔨 Breaking",
       "labels": ["Type: Breaking"]
     },
     {
@@ -11,6 +11,10 @@
     {
       "title": "## 🐛 Fixes",
       "labels": ["Type: Bug"]
+    },
+    {
+      "title": "## 👋 Deprecated",
+      "labels": ["Type: Deprecated"]
     }
   ],
   "ignore_labels": [
