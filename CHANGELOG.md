@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/vladgh/test/tree/HEAD)
+## [v2.21.4](https://github.com/vladgh/test/tree/v2.21.4) (2021-06-09)
 
-[Full Changelog](https://github.com/vladgh/test/compare/v2.21.3...HEAD)
+[Full Changelog](https://github.com/vladgh/test/compare/v2.21.3...v2.21.4)
 
 **Fixed bugs:**
 
