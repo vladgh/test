@@ -34,6 +34,8 @@ jobs:
         with:
           commit_message: Update Changelog for ${{ github.ref }}
           file_pattern: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         uses: actions/create-release@v1
