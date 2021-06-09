@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref }}
+          token: ${{ secrets.PAT }}
 
       - name: Build Changelog
         id: github_release
