@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - run: docker run -it --rm -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test generate_changelog --header-label "Release_v${{ github.event.inputs.versionName }}" --unreleased-only --future-release "v${{ github.event.inputs.versionName }}"
+      - run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user vladgh --project test generate_changelog --header-label "Release_v${{ github.event.inputs.versionName }}" --unreleased-only --future-release "v${{ github.event.inputs.versionName }}"
         # with:
         #   ref: master
 
