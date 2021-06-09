@@ -27,10 +27,10 @@ jobs:
           ref: master
 
       - name: Generate CHANGELOG.md
-        run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v "$(pwd)":/usr/local/src/your-app githubchangeloggenerator/github-changelog-generator --user ${{ github.repository_owner }} --project ${{ github.event.repository.name }} --future-release "v${{ github.event.inputs.versionName }}"
+        run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v "$(pwd)":/usr/local/src/your-app githubchangeloggenerator/github-changelog-generator --user ${{ github.repository_owner }} --project ${{ github.event.repository.name }} --future-release v${{ github.event.inputs.versionName }}
 
       - name: Generate release notes
-        run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v "$(pwd)":/usr/local/src/your-app githubchangeloggenerator/github-changelog-generator --user ${{ github.repository_owner }} --project ${{ github.event.repository.name }} --future-release "v${{ github.event.inputs.versionName }}" --unreleased-only --output release_notes.md
+        run: docker run -e CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -v "$(pwd)":/usr/local/src/your-app githubchangeloggenerator/github-changelog-generator --user ${{ github.repository_owner }} --project ${{ github.event.repository.name }} --future-release v${{ github.event.inputs.versionName }} --unreleased-only --output release_notes.md
 
       - name: Commit CHANGELOG.md
         uses: stefanzweifel/git-auto-commit-action@v4

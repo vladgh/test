@@ -3,7 +3,7 @@ name: Unreleased
 on: [workflow_dispatch]
 
 jobs:
-  release:
+  unreleased:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
