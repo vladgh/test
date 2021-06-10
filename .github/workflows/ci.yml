@@ -1,9 +1,8 @@
 name: CI
 
 on:
-  push:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/2 * * * *'
 
 jobs:
   build:
@@ -18,6 +17,10 @@ jobs:
         env:
           repo: ${{ github.repository }}
         run: echo "${repo##*/}"
+      - name: Print github
+        env:
+          EVENT: ${{ toJSON( github ) }}
+        run: echo "$EVENT"
       - name: Print event data
         env:
           EVENT: ${{ toJSON( github.event ) }}
