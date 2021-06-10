@@ -15,9 +15,7 @@ jobs:
           owner: ${{ github.repository_owner }}
         run: echo "${owner}"
       - name: Print repo name
-        env:
-          repo: ${{ github.repository }}
-        run: echo "${repo##*/}"
+        run: echo "${${{ github.repository }}##*/}"
       - name: Print event data
         env:
           EVENT: ${{ toJSON( github.event ) }}
