@@ -1,0 +1,91 @@
+name: Debug
+
+on:
+  schedule:
+    - cron:  '*/5 * * * *'
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Hello, world!
+      - name: Print owner
+        env:
+          owner: ${{ github.repository_owner }}
+        run: echo "${owner}"
+      - name: Print repo name
+        env:
+          repo: ${{ github.repository }}
+        run: echo "${repo##*/}"
+      - name: Print github
+        env:
+          EVENT: ${{ toJSON( github ) }}
+        run: echo "$EVENT"
+      - name: Print event data
+        env:
+          EVENT: ${{ toJSON( github.event ) }}
+        run: echo "$EVENT"
+      # - name: Set env
+      #   run: echo "RELEASE_VERSION=${GITHUB_REF#refs\/*\/v}" >> $GITHUB_ENV
+      # - run: echo "${{ env.RELEASE_VERSION }}"
+      # - uses: actions/checkout@v2
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: ${{ github.head_ref }}
+      # - run: echo "RELEASE_VERSION=${GITHUB_REF#refs\/*\/v}" >> testfile
+      # - run: ls -lah
+      # - uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: Update Changelog for ${{ env.RELEASE_VERSION }}
+      #     file_pattern: testfile
+      #     token: ${{ secrets.PAT }}
+
+
+  # build:
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     PACKER_VERSION: '1.5.1'
+  #     VAULT_VERSION: '1.3.1'
+  #     VAULT_ADDR: 'https://vault.ghn.me:8200'
+  #     AWS_PROFILE: ${{ matrix.ami.profile }}
+  #   strategy:
+  #     matrix:
+  #       ami:
+  #         - name: testami1
+  #           profile: testprofile1
+  #         - name: testami2
+  #           profile: testprofile2
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - name: test
+  #     run: echo "Running ${matrix.ami.name} with ${AWS_PROFILE}"
+  #     if: matrix.ami.name != 'testami1'
+
+
+    # - run: git clone https://github.com/vghn/ansible ../ansible
+    # - name: Install Packer
+    #   run: |
+    #         wget -q "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
+    #         wget -qO - "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
+    #         sudo unzip -d /usr/local/bin/ "packer_${PACKER_VERSION}_linux_amd64.zip"
+    #         packer version
+    # - name: Install Vault
+    #   run: |
+    #         wget -q "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip"
+    #         wget -qO - "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_SHA256SUMS" | grep linux_amd64 | sha256sum -c
+    #         sudo unzip -d /usr/local/bin/ "vault_${VAULT_VERSION}_linux_amd64.zip"
+    #         vault version
+    # - name: Set up Python
+    #   uses: actions/setup-python@v2
+    # - name: Install dependencies
+    #   run: |
+    #     python3 -m pip install --upgrade pip ansible hvac pycrypto aws-amicleaner future
+    # - run: ansible --version
+    # - run: amicleaner --version
+    # - name: Run a one-line script
+    #   run: echo Hello, world!
+    # - name: Run a multi-line script
+    #   run: |
+    #     echo Add other actions to build,
+    #     echo test, and deploy your project.
