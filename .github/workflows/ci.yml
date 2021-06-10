@@ -1,12 +1,11 @@
-name: CI
+name: Tests
 
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
     - cron:  '*/5 * * * *'
 
 jobs:
-  build:
+  debug:
     runs-on: ubuntu-latest
     steps:
       - run: echo Hello, world!
