@@ -3,15 +3,25 @@ name: CI
 on:
   push:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron:  '* * * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - run: echo Hello, world!
-      - run: echo "${{ toJSON( github ) }}"
-      - run: echo "${{ toJSON( github.event ) }}"
+      - name: Print owner
+        env:
+          owner: ${{ github.repository_owner }}
+        run: echo "${owner}"
+      - name: Print repo name
+        env:
+          repo: ${{ github.repository }}
+        run: echo "${repo##*/}"
+      - name: Print event data
+        env:
+          EVENT: ${{ toJSON( github.event ) }}
+        run: echo "$EVENT"
       # - name: Set env
       #   run: echo "RELEASE_VERSION=${GITHUB_REF#refs\/*\/v}" >> $GITHUB_ENV
       # - run: echo "${{ env.RELEASE_VERSION }}"
