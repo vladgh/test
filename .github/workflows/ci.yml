@@ -18,7 +18,7 @@ jobs:
         env:
           repo: ${{ github.repository }}
           repo_name: ${repo##*/}
-        run: echo "${repo_name}"
+        run: echo "${repo##*/} ${repo}"
       - name: Print event data
         env:
           EVENT: ${{ toJSON( github.event ) }}
