@@ -6,11 +6,11 @@ jobs:
   publish:
     name: Publish collection to Ansible Galaxy
     runs-on: ubuntu-latest
-#     steps:
+    steps:
 #       - name: Checkout
 #         uses: actions/checkout@v2
-#       - name: Set env
-#         run: echo "RELEASE_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 #       - name: Publish collection
 #         uses: docker://ghcr.io/artis3n/ansible_galaxy_collection:latest
 #         with:
