@@ -10,9 +10,9 @@ jobs:
       matrix:
         debug:
           - key1a: value1a
-            key2a: value1a
+            key2a: value2a
           - key1b: value1b
-            key2b: value1b
+            key2b: value2b
     steps:
           - name: Dump GitHub context
             env:
