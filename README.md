@@ -4,4 +4,4 @@
 
 New bug PR.
 
-Link to [actions](./actions)
+Link to [actions](/actions)
